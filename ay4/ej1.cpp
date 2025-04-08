@@ -5,21 +5,21 @@ using namespace std;
 class Vehiculo{
 public:
     virtual void mover(){
-        cout << "El vehículo se mueve." << endl;
+        cout << "el vehiculo se mueve" << endl;
     }
 };
 
 class Auto : public Vehiculo{
 public:
     void mover() override{
-        cout << "El auto se mueve con motor. 🚗" << endl;
+        cout << "el auto se mueve" << endl;
     }
 };
 
 class Bicicleta : public Vehiculo{
 public:
     void mover() override{
-        cout << "La bicicleta se mueve con pedales. 🚲" << endl;
+        cout << "la bicicleta se mueve" << endl;
     }
 };
 
@@ -31,11 +31,11 @@ int main(){
     Auto RayoMcQueen;
     Bicicleta miBici;
 
-    Vehiculo* pAuto = &RayoMcQueen;
-    Vehiculo* pBici = &miBici;
+    Vehiculo* p1 = &RayoMcQueen;
+    Vehiculo* p2 = &miBici;
 
-    mostrarMovimiento(pAuto);
-    mostrarMovimiento(pBici);
+    mostrarMovimiento(p1);
+    mostrarMovimiento(p2);
 
     return 0;
 }
